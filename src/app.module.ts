@@ -2,6 +2,10 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Task } from './Task/task.entity';
+import { TaskModule } from './Task/task.module';
+import { User } from './Module/User/user.entity';
+import { UserModule } from './Module/User/user.module';
 
 @Module({
   imports: [

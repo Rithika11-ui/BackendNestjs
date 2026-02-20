@@ -1,4 +1,4 @@
-import { User } from "src/User/user.entity";
+import { User } from "src/Module/User/user.entity";
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 
 @Entity()
@@ -12,11 +12,11 @@ export class Task{
     @Column()
     description: string;
 
-    @Column({type: 'datetime', default: ()=> 'CURRENT_TIMESTAMP'})
-    cretaedAt: Date
+    @Column({ type: 'datetime', default: () => 'CURRENT_TIMESTAMP' })
+    createdAt: Date;
 
     @Column({type: 'datetime', nullable: true})
-    CompletedAt: Date;
+    completedAt: Date;
 
     @ManyToOne(() => User , user=> user.tasks, {onDelete: 'CASCADE'})
     user: User;

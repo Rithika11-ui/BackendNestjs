@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
-import { Receipt } from "./receipt.entity";
+import { Receipt } from "../../db/receipt.entity";
 import { ReceiptController } from "./receipt.controller";
 import { ReceiptsService } from "./receipt.service";
 

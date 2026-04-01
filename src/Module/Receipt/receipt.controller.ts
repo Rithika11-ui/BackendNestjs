@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post, UseGuards } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Patch, Post, UseGuards, UseInterceptors } from "@nestjs/common";
 import { ReceiptsService } from "./receipt.service";
 import { CreateReceipDto } from './../../dto/create-receipt.dto';
 import { UpdateReceiptDto } from "src/dto/update-receipt.dto";

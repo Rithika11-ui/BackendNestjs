@@ -12,10 +12,9 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         transport: Transport.TCP,
       },
     ]),
-    forwardRef(() => NotificationsModule),
+     NotificationsModule,
   ],
   controllers: [OrdersController],
   providers: [OrdersService],
-  exports: [OrdersService],
 })
 export class OrdersModule {}
